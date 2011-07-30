@@ -19,9 +19,9 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="HomeIcon.png" gap:role="default"/>
+	<icon src="HomeIcon.png" gap:role="default" width="144" height="144"/>
 
-   <gap:splash src="SplashScreen.png" />
+   <gap:splash src="SplashScreen.png" width="380" height="460" />
 
 	<!-- sample preference specification -->
 	<preference name="orientation" value="portrait" />

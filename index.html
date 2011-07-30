@@ -74,10 +74,6 @@
 			}
 		}
 		
-		$('#totalInput').blur(function() {
-		  alert('Handler for .blur() called.');
-		});
-		
 		$(window).resize(function() {
 		  updateFooter();
 		});
@@ -86,18 +82,11 @@
 			updateOrientation();
 			var total = 1;
 			$("#usage").hide();
-			updateFooter();
-			
-			var webappCache = window.applicationCache;
-			 
-			function updateCache()
-			{
-				webappCache.swapCache();
-			}
-			 
-			webappCache.addEventListener("updateready", updateCache, false);
-			updateCache();
-			
+			updateFooter();	
+			$('#totalInput').blur(function() {
+			  console.log('#totalInput Blurred!');
+			  enterUsageMode();
+			});		
 		});
 		
 		</script>

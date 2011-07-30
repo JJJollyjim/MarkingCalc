@@ -21,7 +21,7 @@
 
 	<icon src="HomeIcon.png" gap:role="default" width="144" height="144"/>
 
-   <gap:splash src="SplashScreen.png" width="380" height="460" />
+   <gap:splash src="SplashScreen.png" width="320" height="480" />
 
 	<!-- sample preference specification -->
 	<preference name="orientation" value="portrait" />

@@ -68,6 +68,12 @@ p {
    font-size: 18pt;
 }
 
-a {
-	color: black;
+#help {
+	float: left;
+	margin-left: 10px;
+}
+
+#settings {
+	float: right;
+	margin-right: 10px;
 }

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html manifest="appcache.manifest">
+	<head>
+		<title>Marking Calculator!</title>
+		<link rel="Stylesheet" href="Style.css"> 
+		<link rel="apple-touch-icon-precomposed" href="HomeIcon.png"/> 
+		<link rel="apple-touch-startup-image" href="SplashScreen.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script>
+		var total;
+		var totalInput;
+		var number;
+		document.ontouchmove = function(e){ e.preventDefault(); }
+		function enterUsageMode() {
+			total = $("#totalInput").val();
+			$("#total").slideUp();
+			$("h1").slideUp();
+			$("p").slideUp();
+			$("#usage").slideDown();
+			$("#usage").focusin();
+			console.log(total + " submitted as total");
+			updateOutput();
+		}
+		
+		function updateOrientation() {
+			console.log("Orientation changed to " + window.orientation);
+			switch(window.orientation){  
+				case 0:  
+					break;  
+				case -90: 
+					alert("Marking Calculator works best in portrait mode");  
+					break;  
+				case 90:  
+					alert("Marking Calculator works best in portrait mode");  
+					break;  
+				case 180:
+					break; 
+			} 
+		} 
+		
+		function updateFooter() {
+			$("#footer").css("top", $(window).height()-40 + "px");
+		}
+		
+		function showHelp() {
+			alert("Note to self: Put helpful content here!");
+		}
+		
+		String.prototype.replaceAll = function(str1, str2, ignore) 
+		{
+			return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+		}
+		
+		function updateOutput() {
+			number = $("#realInput").val();
+			if(number.split(/,/g).length > 1){
+				javascript:location.reload(true);
+			} else {
+				if(number.split(/#/g).length > 1){
+					$("#output").html("0/" + total + "<br />" + "0%");
+					$("#realInput").val("");
+				} else {
+					//number = number.replace("*", ".");
+					number = number.replaceAll("*",".");
+					number = eval(number);
+					if (undefined===window.number) {
+						$("#output").html("0/" + total + "<br />" + "0%");
+					} else {
+						$("#output").html(number + "/" + total + "<br />" + Math.round(number/total*100*10)/10 + "%");
+					}
+				}
+			}
+		}
+		
+		$(window).resize(function() {
+		  updateFooter();
+		});
+		
+		$("document").ready(function() {
+			updateOrientation();
+			var total = 1;
+			$("#usage").hide();
+			updateFooter();
+			
+			var webappCache = window.applicationCache;
+			 
+			function updateCache()
+			{
+				webappCache.swapCache();
+			}
+			 
+			webappCache.addEventListener("updateready", updateCache, false);
+			updateCache();
+			
+		});
+		
+		</script>
+	</head>
+	<body onorientationchange="updateOrientation();">
+		<h1>Marking Calculator</h1>
+		<p>is epic. Better description coming soon, so look out</p>
+		<div id="total" class="inputContainer">&nbsp;<label for="totalInput">Total: </label><input type="tel" id="totalInput" name="totalInput" />&nbsp;<button id="submitInput" onclick="enterUsageMode()">Go!</button></div>
+		<div id="usage"><br />
+		<input id="realInput" type="tel" placeholder="Enter number/addition string" onkeyup="updateOutput()"></div>
+		<div id="output"></div>
+		<div id="footer"><a href="javascript:showHelp()">Tap for help!</a></div>
+	</body>
+</html>

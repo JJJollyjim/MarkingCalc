@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+}
+
+body {
+	background: #ff8e0f; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff8e0f 0%, #be6000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff8e0f), color-stop(100%,#be6000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff8e0f 0%,#be6000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff8e0f 0%,#be6000 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ff8e0f 0%,#be6000 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8e0f', endColorstr='#be6000',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ff8e0f 0%,#be6000 100%); /* W3C */
+	background-repeat: no-repeat;
+	margin: 0;
+	height: 100%;	
+}
+
+h1 {
+	font-size: 24pt;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+label {
+	font-size: 16pt;
+	font-family: sans-serif;
+	margin-right: 0.5em;
+	line-height:16pt;
+}
+
+input {
+	height: 16pt;
+	font-size: 16pt;
+	left: auto;
+	//float: right;
+	width: 35%;
+}
+
+button {
+	font-size: 16pt;
+}
+
+div {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+p {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#realInput {
+	width: 90%;
+}
+
+#output {
+	font-size: 50pt;
+}
+
+#footer {
+   position:absolute;
+   top:440px;
+   left: 0;
+   width:100%;
+   height:20px;
+   font-size: 18pt;
+}
+
+a {
+	color: black;
+}

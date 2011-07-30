@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns		= "http://www.w3.org/ns/widgets"
-	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.kwiius.markingcalc"
-	version 	= "1.0.0">
+<widget xmlns= "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.kwiius.markingcalc" version = "1.0.0">
 
-	<name>Marking Calculator</name>
+	<name>MarkingCalc</name>
 
 	<description>
 		Look Out!
@@ -26,10 +23,7 @@
 
    <gap:splash src="SplashScreen.png" />
 
-	<feature name="http://api.phonegap.com/1.0/geolocation"/>
-	<feature name="http://api.phonegap.com/1.0/network"/>
-
 	<!-- sample preference specification -->
-	<preference name="orientation" value="portrait">
+	<preference name="orientation" value="portrait" />
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
 </widget>

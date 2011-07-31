@@ -24,22 +24,6 @@
 			updateOutput();
 		}
 		
-		function updateOrientation() {
-			console.log("Orientation changed to " + window.orientation);
-			switch(window.orientation){  
-				case 0:  
-					break;  
-				case -90: 
-					alert("Marking Calculator works best in portrait mode");  
-					break;  
-				case 90:  
-					alert("Marking Calculator works best in portrait mode");  
-					break;  
-				case 180:
-					break; 
-			} 
-		} 
-		
 		function updateFooter() {
 			$("#footer").css("top", $(window).height()-40 + "px");
 		}
@@ -79,7 +63,6 @@
 		});
 		
 		$("document").ready(function() {
-			updateOrientation();
 			var total = 1;
 			$("#usage").hide();
 			updateFooter();	

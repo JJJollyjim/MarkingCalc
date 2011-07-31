@@ -20,6 +20,7 @@ h1 {
 	font-size: 24pt;
 	font-family: sans-serif;
 	text-align: center;
+	margin-bottom: 5px;
 }
 
 label {
@@ -49,6 +50,8 @@ div {
 p {
 	text-align: center;
 	font-family: sans-serif;
+	margin-top: 0px;
+	top: 0px;
 }
 
 #realInput {

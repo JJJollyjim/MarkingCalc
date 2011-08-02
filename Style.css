@@ -13,6 +13,7 @@ body {
 	background: linear-gradient(top, #ff8e0f 0%,#be6000 100%); /* W3C */
 	background-repeat: no-repeat;
 	margin: 0;
+	position: absolute;
 	height: 100%;	
 }
 
@@ -89,4 +90,34 @@ p {
 	height: 100%;
 	display: none;
 	background-color: white;
+}
+
+table {
+	border-width: 0px;
+	border-spacing: 0px;
+	border-style: hidden;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	top: 0px; bottom: 0px; right: 0; left: -1;
+	margin: 0;
+	padding: 0px;
+	position: absolute;
+}
+
+td {
+	border-width: 1px;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: white;
+	width: 48%;
+	height: 160px;
+}
+
+tr {
+	width: 100%;
+	padding: 0px;
 }

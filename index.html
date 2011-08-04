@@ -12,7 +12,8 @@
 		var total;
 		var totalInput;
 		var number;
-		document.ontouchmove = function(e){ e.preventDefault(); }
+		var scr = 0;
+		document.ontouchmove = function(e){ if(scr == 0) {e.preventDefault();} }
 		function enterUsageMode() {
 			total = $("#totalInput").val();
 			$("#total").slideUp();
@@ -30,10 +31,17 @@
 		
 		function showHelp() {
 			$("#helpView").fadeIn();
+			scr = 1;
+		}
+		
+		function exitHelp() {
+			$("#helpView").fadeOut();
+			scr = 0;
 		}
 		
 		function showSettings() {
 			$("#settingsView").fadeIn();
+			scr = 1;
 		}
 		
 		String.prototype.replaceAll = function(str1, str2, ignore) 
@@ -77,7 +85,7 @@
 		
 		</script>
 	</head>
-	<body onorientationchange="updateOrientation();">
+	<body>
 		<h1>Marking Calculator</h1>
 		<p>by Jamie McClymont. Tap the ? for help.</p>
 		<div id="total" class="inputContainer">&nbsp;<label for="totalInput">Total: </label><input type="tel" id="totalInput" name="totalInput" />&nbsp;<button id="submitInput" onclick="enterUsageMode()">Go!</button></div>
@@ -97,7 +105,7 @@
 			</a>
 		</div>
 		<div id="helpView" class="full">
-			<table id="help">
+			<!--<table id="help">
 				<tr>
 					<td>Addidion</td>
 					<td>Decimals</td>
@@ -110,7 +118,26 @@
 					<td>Sup.</td>
 					<td>Toilet!</td>
 				</tr>			
-			</table>
+			</table>-->
+			
+			<a href="javascript:exitHelp()" id="exit"><img src="Exit.png" width="25" height="25"></a>
+			<h2>Instructional Video</h2>
+			(Goes Here)
+			<h2>Addition</h2>
+			<p>
+				It's easy to do addition in the app. All you have to do to add two numbers together is swipe from the "+ * #" button to the plus button.<br>(Screenshot)
+			</p>
+			<h2>Decimals</h2>
+			<p>
+				Decimals are easy to use in Marking Calculator. To add a decimal point, swipe from the "+ * #" button to the asterisk button. The asterisk will function as a decimal point.
+			</p>
+			<h2>Clearing</h2>
+				You have two options for resetting the current equation. Either hold down the backspace button or swipe from the "+ * #" button to the #.
+			<h2>Entering a New Total</h2>
+			<p>
+				Entering a new total is easy. Just drag from the "+ * #" button to the "pause" button, or close and reopen the app.
+			</p>
+			<h2>Something Else</h2>
 		</div>
 		<div id="settingsView" class="full">
 			Settings!

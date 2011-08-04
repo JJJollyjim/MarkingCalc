@@ -23,6 +23,10 @@ h1 {
 	margin-bottom: 5px;
 }
 
+h2 {
+	margin-bottom: 5px;
+}
+
 label {
 	font-size: 16pt;
 	font-family: sans-serif;
@@ -119,4 +123,11 @@ td {
 tr {
 	width: 100%;
 	padding: 0px;
+}
+
+#exit {
+	position: absolute;
+	float: right;
+	right: 5px;
+	top: 5px;
 }

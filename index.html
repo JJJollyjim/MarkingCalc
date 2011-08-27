@@ -16,13 +16,18 @@
 		document.ontouchmove = function(e){ if(scr == 0) {e.preventDefault();} }
 		function enterUsageMode() {
 			total = $("#totalInput").val();
-			$("#total").slideUp();
-			$("h1").slideUp();
-			$("p").slideUp();
-			$("#usage").slideDown();
-			$("#usage").focusin();
-			console.log(total + " submitted as total");
-			updateOutput();
+			if(total != 0) {
+				$("#total").slideUp();
+				$("h1").slideUp();
+				$("p").slideUp();
+				$("#usage").slideDown();
+				$("#usage").focusin();
+				console.log(total + " submitted as total");
+				updateOutput();
+			} else {
+				alert("Sorry, but what you are trying to do would involve dividing by zero. Dividing by zero could blow up the world. Which would be bad.");
+				$("#totalInput").val("");
+			}
 		}
 		
 		function updateFooter() {
@@ -110,23 +115,23 @@
 			<table id="help">
 				<tr>
 					<td id="imageCell"><img src="PAH.png" width="80px"></td>
-					<td>Press the <i>Plus, Astrix, Hash</i> button to show the other buttons (not for use on total entry screen). You can also drag from this button to another button.</td>
+					<td>Press the <i>Plus, Asterisk, Hash</i> button to show the other buttons. You can also drag from this button to another button.</td>
 				</tr>
 				<tr>
 					<td id="imageCell"><img src="Plus.png" width="80px"></td>
-					<td>Drag from the <i>Plus, Astrix, Hash</i> button to the <i>Plus</i> button to add two numbers together (e.g. <i>4 + 5</i> would produce 11).</td>
+					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Plus</i> button to add two numbers together (e.g. <i>6+5</i> would produce 11).</td>
 				</tr>
 				<tr>
 					<td id="imageCell"><img src="Astrix.png" width="80px"></td>
-					<td>Drag from the <i>Plus, Astrix, Hash</i> button to the <i>Astrix</i> button to multiply two numbers together (e.g. <i>4 * 5</i> would produce 20).</td>
+					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Asterisk</i> button to insert a decimal point (e.g. <i>4*5</i> would produce 4.5).</td>
 				</tr>
 				<tr>
 					<td id="imageCell"><img src="Hash.png" width="80px"></td>
-					<td>Drag from the <i>Plus, Astrix, Hash</i> button to the <i>Hash</i> button to clear the input box. (e.g. <i>11 # 4</i> would produce 4).</td>
+					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Hash</i> button to clear the input box. (e.g. <i>11#4</i> would produce 4).</td>
 				</tr>			
 				<tr>
 					<td id="imageCell"><img src="Pause.png" width="80px"></td>
-					<td>Drag from the <i>Plus, Astrix, Hash</i> button to the <i>Pause</i> button to enter a new total.</td>
+					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Pause</i> button to enter a new total (not for use on total entry screen).</td>
 				</tr>			
 			</table>
 			

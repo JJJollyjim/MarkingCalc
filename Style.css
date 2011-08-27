@@ -43,6 +43,14 @@ input {
 	width: 35%;
 }
 
+#total {
+	text-align: center;
+}
+
+#usage {
+	text-align: center;
+}
+
 button {
 	font-size: 16pt;
 }
@@ -143,5 +151,5 @@ img {
 	position: absolute;
 	float: right;
 	right: 5px;
-	top: 10px;
+	top: 11px;
 }

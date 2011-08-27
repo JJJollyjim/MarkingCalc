@@ -16,6 +16,7 @@
 		document.ontouchmove = function(e){ if(scr == 0) {e.preventDefault();} }
 		function enterUsageMode() {
 			total = $("#totalInput").val();
+			total = total.replace(/[^a-zA-Z 0-9]+/g,'');
 			if(total != 0) {
 				$("#total").slideUp();
 				$("h1").slideUp();
@@ -115,7 +116,7 @@
 			<table id="help">
 				<tr>
 					<td id="imageCell"><img src="PAH.png" width="80px"></td>
-					<td>Press the <i>Plus, Asterisk, Hash</i> button to show the other buttons. You can also drag from this button to another button.</td>
+					<td>Press the <i>Plus, Asterisk, Hash</i> button to show the other buttons. You can also drag from this button to another button (none of these buttons will work on the total entry screen).</td>
 				</tr>
 				<tr>
 					<td id="imageCell"><img src="Plus.png" width="80px"></td>
@@ -131,7 +132,7 @@
 				</tr>			
 				<tr>
 					<td id="imageCell"><img src="Pause.png" width="80px"></td>
-					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Pause</i> button to enter a new total (not for use on total entry screen).</td>
+					<td>Drag from the <i>Plus, Asterisk, Hash</i> button to the <i>Pause</i> button to enter a new total.</td>
 				</tr>			
 			</table>
 			

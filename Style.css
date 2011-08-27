@@ -21,6 +21,7 @@ h1 {
 	font-family: sans-serif;
 	text-align: center;
 	margin-bottom: 5px;
+	margin-top: 5px;
 }
 
 h2 {
@@ -64,6 +65,7 @@ p {
 
 #output {
 	font-size: 50pt;
+	text-align: center;
 }
 
 #footer {
@@ -101,9 +103,10 @@ table {
 	border-style: hidden;
 	border-color: gray;
 	border-collapse: collapse;
+	border-top: 1px;
 	background-color: white;
 	width: 100%;
-	top: 0px; bottom: 0px; right: 0; left: -1;
+	right: 0; left: -1;
 	margin: 0;
 	padding: 0px;
 	position: absolute;
@@ -140,5 +143,5 @@ img {
 	position: absolute;
 	float: right;
 	right: 5px;
-	top: 5px;
+	top: 10px;
 }

@@ -112,6 +112,7 @@ table {
 	border-color: gray;
 	border-collapse: collapse;
 	border-top: 1px;
+	border-bottom: 1px;
 	background-color: white;
 	width: 100%;
 	right: 0; left: -1;
@@ -152,4 +153,10 @@ img {
 	float: right;
 	right: 5px;
 	top: 11px;
+}
+
+#byKwiius {
+	text-align: center;
+	font-family: sans-serif;
+	color: #666;
 }

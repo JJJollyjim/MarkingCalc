@@ -20,7 +20,8 @@
 	</gap:platforms>
 
 	<icon src="HomeIcon-hd.png" gap:role="default" width="144" height="144"/>
-	<icon src="HomeIcon.png" width="72" height="72"/>
+	<icon src="HomeIcon-72.png" width="72" height="72"/>
+	<icon src="HomeIcon-57.png" width="57" height="57"/>
 
    <gap:splash src="SplashScreen.png" width="320" height="480" />
 

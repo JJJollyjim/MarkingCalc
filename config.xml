@@ -19,7 +19,8 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="HomeIcon.png" gap:role="default" width="144" height="144"/>
+	<icon src="HomeIcon-hd.png" gap:role="default" width="144" height="144"/>
+	<icon src="HomeIcon.png" width="72" height="72"/>
 
    <gap:splash src="SplashScreen.png" width="320" height="480" />
 

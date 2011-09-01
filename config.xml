@@ -27,5 +27,6 @@
 
 	<!-- sample preference specification -->
 	<preference name="orientation" value="portrait" />
+	<preference name="universal" value="false" /> 
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
 </widget>
